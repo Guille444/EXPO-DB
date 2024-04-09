@@ -1,0 +1,18 @@
+MariaDB [(none)]> use db_taller_rodriguez;
+Database changed
+MariaDB [db_taller_rodriguez]> CREATE USER 'db_taller_rodriguez_desarrollador'@'localhost' IDENTIFIED BY '12345678';
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [db_taller_rodriguez]> GRANT SELECT, INSERT, UPDATE, DELETE ON *.* TO 'db_taller_rodriguez_desarrollador'@'localhost';
+Query OK, 0 rows affected (0.015 sec)
+
+MariaDB [db_taller_rodriguez]> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [db_taller_rodriguez]> GRANT CREATE ROUTINE, ALTER ROUTINE, EXECUTE, CREATE VIEW, TRIGGER ON *.* TO 'db_taller_rodriguez_desarrollador'@'localhost';
+Query OK, 0 rows affected (0.016 sec)
+
+MariaDB [db_taller_rodriguez]> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [db_taller_rodriguez]>
